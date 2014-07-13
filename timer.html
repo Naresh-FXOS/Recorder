@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Audio</title>
+<meta name="viewport" content="width = device-width,initial-scale=1,user-scalable=no" />
+<style type="text/css">
+	*{
+		margin:0px;
+		padding:0px;	
+	}
+	#timer{
+		width:100%;
+		display:block;
+		background:#000;
+		overflow:hidden;
+	}
+	#h,#m,#s,#ms{
+		width:20%;		
+	}
+	#timer > div{
+		float:left;
+		text-align:center;
+		font-size:10em;
+		color:#fff;	
+	}
+</style>
+</head>
+<body>
+	<!--<img src="firefox/recorder.png" alt="image" />-->
+    <div id="timer">
+    	<div id="h">00</div>
+        <div>:</div>
+       <div id="m">00</div>
+       <div>:</div>
+       <div id="s">00</div>
+       <div>:</div>
+       <div id="ms">00</div>
+       
+    </div>
+    
+    <div>
+    	<input type="button" id="start" value="strat"/>
+        <input type="button" id="stop" value="stop" />
+        <input type="button" id="reset" value="reset" />
+     </div>
+    <script type="text/javascript">
+	var myvar;
+			var ms=0,sec=0,min=0,hour=0;
+			var strat = document.getElementById("start");
+			var stop = document.getElementById("stop");
+			var mseconds = document.getElementById("ms");
+			var seconds = document.getElementById("s");
+			var minutes = document.getElementById("m");
+			var hours = document.getElementById("h");
+			
+				function stopwatch(){
+					
+				ms++;
+				if(ms ==100)
+				{
+					ms = 0;
+					
+					
+							sec++;
+					if(sec == 60)
+					{
+						sec = 0;
+						
+						min++;	
+							if(min == 60)
+							{
+								min = 0;
+								hour++;
+								if(hour < 10)
+								{
+									hour = "0"+hour;	
+								}
+								
+								hours.innerHTML = hour;
+								
+							}
+							if(min < 10)
+							{
+								min = "0"+min;	
+								
+							}
+						
+						minutes.innerHTML = min;
+					}
+					
+					if(sec < 10)
+					{
+						sec = "0"+sec;	
+					}
+					
+					seconds.innerHTML = sec;
+					
+					
+				}
+				mseconds.innerHTML = ms;
+			
+}
+				
+				start.onclick = function(){
+					
+					myvar = setInterval(stopwatch,10);
+				}
+				stop.onclick = function(){
+					
+					clearInterval(myvar);
+				}
+				reset.onclick = function(){
+					
+					ms=0,sec=0,min=0,hour=0;
+					mseconds.innerHTML = "00";
+					seconds.innerHTML = "00";
+					minutes.innerHTML = "00";
+					hours.innerHTML = "00";
+				}
+				
+				
+	</script>
+</body>
+</html>
