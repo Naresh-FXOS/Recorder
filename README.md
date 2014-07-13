@@ -1,5 +1,7 @@
 Recorder
 ========
+These are Bakbone files(working on ui-using jquery mobile)
+
 building Firefox os Sound Recorder App,App is currenly work in progress.
 
 Most of the code is done(recording,saving,generate bars,timer),
