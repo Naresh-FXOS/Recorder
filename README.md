@@ -1,5 +1,8 @@
 Recorder
 ========
+
+![alt tag](https://raw.githubusercontent.com/Naresh-FXOS/Recorder/master/UI%20interface.png)
+
 These are Bakbone files(working on ui-using jquery mobile)
 
 building Firefox os Sound Recorder App,App is currenly work in progress.
