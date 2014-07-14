@@ -2,6 +2,8 @@ Recorder
 ========
 
 ![alt tag](https://raw.githubusercontent.com/Naresh-FXOS/Recorder/master/UI-interface_main-page.png)
+![alt tag](https://raw.githubusercontent.com/Naresh-FXOS/Recorder/master/index.png)
+![alt tag](https://raw.githubusercontent.com/Naresh-FXOS/Recorder/master/index11.png)
 
 These are Bakbone files(working on ui-using jquery mobile)
 
