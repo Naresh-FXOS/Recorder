@@ -8,20 +8,14 @@ wavesurfer.init({
 wavesurfer.on('ready', function () {
     wavesurfer.play();
 });*/
-
-
-
 navigator.getUserMedia =  navigator.getUserMedia ||
                        navigator.webkitGetUserMedia ||
                        navigator.mozGetUserMedia ||
                        navigator.msGetUserMedia;
 if(navigator.getUserMedia ){
-    
   navigator.getUserMedia ({
-        video:false,
-        audio:true},
-      function(stream) {
-		 
+        video:false,audio:true},
+      	function(stream) {
 		 var canvas, ctx, source, context, analyser, fbc_array, bars, bar_x, bar_width, bar_height;
 		 var mediaRecorder = new MediaRecorder(stream);
 		 	context = new AudioContext();
@@ -33,8 +27,8 @@ if(navigator.getUserMedia ){
 			//analyser.connect(context.destination);
 			frameLooper();
 			
-					function frameLooper(){
-	window.mozRequestAnimationFrame(frameLooper);
+function frameLooper(){
+	window.mozRequestAnimationFrame(frameLooper);//mozanimation frame(tested 2.0/1.4)
 	fbc_array = new Uint8Array(analyser.frequencyBinCount);
 	analyser.getByteFrequencyData(fbc_array);
 	ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
