@@ -9,6 +9,7 @@
 		margin:0px;
 		padding:0px;	
 	}
+	/*
 	#timer{
 		width:100%;
 		display:block;
@@ -23,23 +24,17 @@
 		text-align:center;
 		font-size:10em;
 		color:#fff;	
-	}
+	}*/
 </style>
 </head>
 <body>
 	<!--<img src="firefox/recorder.png" alt="image" />-->
     <div id="timer">
-    	<div id="h">00</div>
-        <div>:</div>
-       <div id="m">00</div>
-       <div>:</div>
-       <div id="s">00</div>
-       <div>:</div>
-       <div id="ms">00</div>
-       
+    	<span id="h">00</span><span>:</span><span id="m">00</span><span>:</span><span id="s">00</span><span>:</span><span id="ms">00</span>
     </div>
     
     <div>
+        <!-- link to Recording Button -->
     	<input type="button" id="start" value="strat"/>
         <input type="button" id="stop" value="stop" />
         <input type="button" id="reset" value="reset" />
@@ -54,15 +49,12 @@
 			var minutes = document.getElementById("m");
 			var hours = document.getElementById("h");
 			
-				function stopwatch(){
-					
+	function stopwatch(){
 				ms++;
 				if(ms ==100)
 				{
 					ms = 0;
-					
-					
-							sec++;
+					sec++;
 					if(sec == 60)
 					{
 						sec = 0;
@@ -103,7 +95,7 @@
 }
 				
 				start.onclick = function(){
-					
+					/* disable*/
 					myvar = setInterval(stopwatch,10);
 				}
 				stop.onclick = function(){
